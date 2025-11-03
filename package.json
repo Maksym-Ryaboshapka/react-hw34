@@ -1,7 +1,7 @@
 {
-  "name": "react-hw32",
+  "name": "react-hw34",
   "version": "0.1.0",
-  "homepage": "https://maksym-ryaboshapka.github.io/react-hw32/",
+  "homepage": "https://maksym-ryaboshapka.github.io/react-hw34/",
   "private": false,
   "dependencies": {
     "@reduxjs/toolkit": "^2.9.0",
@@ -9,6 +9,7 @@
     "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.13.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-redux": "^9.2.0",

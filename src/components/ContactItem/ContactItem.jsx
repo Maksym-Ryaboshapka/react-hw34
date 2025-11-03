@@ -1,7 +1,7 @@
-import {useDispatch} from "react-redux";
-import {removeContact} from "../../redux/contactsSlice";
+import { useDispatch } from "react-redux";
+import { removeContact } from "../../redux/contacts/thunk";
 
-const ContactItem = ({contact}) => {
+const ContactItem = ({ contact }) => {
   const dispatch = useDispatch();
 
   const handleRemove = () => {
@@ -10,9 +10,9 @@ const ContactItem = ({contact}) => {
 
   return (
       <>
-        <p>{contact.name}</p>
-        <p>{contact.number}</p>
-        <button onClick={handleRemove}>Remove</button>
+        <p>{ contact.name }</p>
+        <p>{ contact.phone }</p>
+        <button onClick={ handleRemove }>Remove</button>
       </>
   );
 };

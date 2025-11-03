@@ -1,6 +1,5 @@
-import {useDispatch} from "react-redux";
-import {v4 as uuid} from "uuid";
-import {addContact} from "../../redux/contactsSlice";
+import { useDispatch } from "react-redux";
+import { addContact } from "../../redux/contacts/thunk";
 
 const ContactEditor = () => {
   const dispatch = useDispatch();
@@ -10,19 +9,15 @@ const ContactEditor = () => {
 
     const form = e.currentTarget;
     const name = form.elements.name.value;
-    const number = form.elements.number.value;
-
-    const newContact = {
-      id: uuid(), name, number
-    };
+    const phone = form.elements.number.value;
 
     form.reset();
 
-    dispatch(addContact(newContact));
+    dispatch(addContact({ name, phone }));
   };
 
   return (
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={ handleSubmit }>
         <input type="text" placeholder="Name" name="name" required/>
         <input type="text" placeholder="Number" name="number" required/>
         <button type="submit">Add</button>
